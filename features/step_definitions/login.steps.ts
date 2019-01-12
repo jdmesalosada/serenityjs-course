@@ -1,6 +1,6 @@
 import { Navigate } from "../../src/navigate/navigate";
 import { EnterCredentials } from "../../src/login/enter_credentials";
-import { ValidateLoginWasUnsuccesful } from "../../src/login/assertion/validate_login_was";
+import { ValidateLoginWasUnsuccesful } from "../../src/login/assertions/validate_login_was";
 
 export = function loginSteps() {
 
@@ -22,5 +22,4 @@ export = function loginSteps() {
             ValidateLoginWasUnsuccesful()
         )
     });
-
 }

@@ -1,11 +1,7 @@
 import { Question } from "serenity-js/lib/screenplay";
+import { Text } from "serenity-js/lib/serenity-protractor";
 import { LoginFail } from "../ui/login_fail";
-import { Wait, Is, Text } from "serenity-js/lib/serenity-protractor";
 
-
-export const ActualInvalidLoginMessage = () => Question.about('#actor get the target value',
+export const ActualLoginMessage = () => Question.about("#actor gets the invalid login message",
     actor => Text.of(LoginFail.Invalid_Credentials_Message).answeredBy(actor) as PromiseLike<string>
 );
-
-
-
