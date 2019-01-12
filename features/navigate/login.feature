@@ -4,8 +4,9 @@ Feature: User is able to navigate through the application
   James would like to navigate through the application
   to validate it is working as expected
 
+@login
 Scenario: Unsuccesful login
 
 Given that James opens the Login page
-When he enters a wrong credentials
-Then he should be warned about the invalid credentials
+#When he enters a wrong credentials
+#Then he should be warned about the invalid credentials
