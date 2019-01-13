@@ -10,3 +10,13 @@ Scenario: Unsuccesful login
 Given that James opens the Login page
 #When he enters a wrong credentials
 #Then he should be warned about the invalid credentials
+
+
+@take_notes
+Scenario: User takes notes
+
+Given that James opens the Login page
+And he takes note of the year
+When he remembers the year
+#When he enters a wrong credentials
+#Then he should be warned about the invalid credentials

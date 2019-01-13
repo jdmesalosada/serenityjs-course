@@ -1,8 +1,9 @@
-import { Task, PerformsTasks } from "serenity-js/lib/screenplay";
+import { Task, PerformsTasks, TakeNotes, UsesAbilities, AnswersQuestions } from "serenity-js/lib/screenplay";
 import { Enter, Click } from "serenity-js/lib/serenity-protractor";
 import { Login } from "./ui/login";
 import { Pause } from "../serenity/interactions/Pause";
 import { Refresh } from "../serenity/interactions/Refresh";
+import { GetYearValueAnnoted } from "./take_notes";
 
 /*export class EnterPass implements Task {
 
@@ -69,6 +70,7 @@ export const EnterUsername = (username: string) => Task.where('#actor enters the
 export const CLickSignIn = () => Task.where('#actor clicks on enter button',
     Click.on(Login.SignIn_Button)
 );
+
 
 export const EnterCredentials = (username: string, pass: string) => Task.where('#actor enters its credentials',
     EnterUsername(username),

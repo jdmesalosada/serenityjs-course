@@ -10,7 +10,8 @@
     "e2e": "protractor ./protractor.conf.js",
     "report": "serenity run",
     "test": "failsafe clean e2e report",
-    "webdriver:update": "webdriver-manager update"
+    "webdriver:update": "webdriver-manager update",
+    "runSpecificScenario": "node ./node_modules/protractor/bin/protractor ./protractor.conf.js --cucumberOpts.name 'User takes notes'"
   },
   "author": "Julian Mesa",
   "maintainers": [

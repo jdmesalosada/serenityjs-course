@@ -4,3 +4,8 @@ El curso lo puede encontrar en: https://www.youtube.com/playlist?list=PLeo6Q1inq
 
 
 Run: npm run e2e
+
+
+DELAYED ASSERTIONS
+
+https://github.com/jan-molak/serenity-js/blob/master/book/design/assertions.md#delayed-assertions
