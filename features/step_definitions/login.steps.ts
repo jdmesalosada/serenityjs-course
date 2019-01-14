@@ -1,7 +1,7 @@
 import { Navigate } from "../../src/navigate/navigate";
 import { EnterCredentials, EnterUsername } from "../../src/login/enter_credentials";
 import { ValidateLoginWasUnsuccesful } from "../../src/login/assertions/validate_login_was";
-import { TakeNote, TakeNotes, Actor } from "serenity-js/lib/screenplay";
+import { TakeNote, TakeNotes, Actor, Notepad } from "serenity-js/lib/screenplay";
 import { Text } from "serenity-js/lib/serenity-protractor";
 import { Login } from "../../src/login/ui/login";
 import { GetYearValueAnnoted } from "../../src/login/take_notes";
@@ -52,13 +52,11 @@ export = function loginSteps() {
 
             */
 
-           return this.stage.theActorInTheSpotlight().attemptsTo(
-               EnterUsername(
-            GetYearValueAnnoted.of()
-                .answeredBy(this.stage.theActorInTheSpotlight())
-                .then(x => x)) 
-            )
-
+        return this.stage.theActorInTheSpotlight().attemptsTo(
+            EnterUsername(TakeNotes
+                .as(this.stage.theActorInTheSpotlight())
+                .read("year_test") as any)
+        )
     });
 
 

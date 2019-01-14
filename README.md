@@ -9,3 +9,7 @@ Run: npm run e2e
 DELAYED ASSERTIONS
 
 https://github.com/jan-molak/serenity-js/blob/master/book/design/assertions.md#delayed-assertions
+
+TAKE NOTES
+
+https://github.com/jan-molak/serenity-js/blob/master/packages/core/spec/abilities/take_notes.spec.ts

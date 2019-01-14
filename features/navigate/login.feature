@@ -18,5 +18,6 @@ Scenario: User takes notes
 Given that James opens the Login page
 And he takes note of the year
 When he remembers the year
+#And he remembers the year from another step library
 #When he enters a wrong credentials
 #Then he should be warned about the invalid credentials
