@@ -25,9 +25,9 @@ serenity: {
         crew.serenityBDDReporter(),
 
         // crew.photographer()
-
         crew.Photographer.who(_ => _
-            .takesPhotosOf(_.Failures)
+            //.takesPhotosOf(_.Failures)
+            .takesPhotosOf(_.Tasks_and_Interactions)
         )
 
         // crew.consoleReporter()

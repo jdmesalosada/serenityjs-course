@@ -1,6 +1,6 @@
 import { Navigate } from "../../src/navigate/navigate";
 import { EnterCredentials } from "../../src/login/enter_credentials";
-import { LoginWasUnsuccesful } from "../../src/login/questions/login_was";
+import { ValidateLoginWasUnsuccesful } from "../../src/login/assertions/validate_login_was";
 
 export = function loginSteps() {
 
@@ -13,14 +13,13 @@ export = function loginSteps() {
 
     this.When(/^he enters a wrong credentials$/, function () {
         return this.stage.theActorInTheSpotlight().attemptsTo(
-        EnterCredentials("james", "123456")
+            EnterCredentials("james", "123456")
         )
     });
 
     this.Then(/^he should be warned about the invalid credentials$/, function () {
         return this.stage.theActorInTheSpotlight().attemptsTo(
-            LoginWasUnsuccesful()
+            ValidateLoginWasUnsuccesful()
         )
     });
-
 }
